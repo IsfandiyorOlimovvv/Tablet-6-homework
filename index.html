@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <title>Student Management</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Qidiruv va guruhni tanlash -->
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Searching">
+      <select id="groupFilter">
+        <option value="All">All</option>
+        <option value="REACT N1">REACT N1</option>
+        <option value="REACT N11">REACT N11</option>
+        <option value="REACT N13">REACT N13</option>
+        <option value="REACT N15">REACT N15</option>
+      </select>
+      <button id="addStudentBtn">Add student</button>
+    </div>
+
+    <!-- Ro'yxat -->
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Group</th>
+          <th>Works?</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- O'quvchilar ma'lumotlari shu yerga qo'shiladi -->
+      </tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="studentModal">
+      <div class="modal-content">
+        <h2>Adding student</h2>
+        <form id="studentForm">
+          <label for="firstname">First name:</label>
+          <input type="text" id="firstname" name="firstname" required>
+          
+          <label for="lastname">Last name:</label>
+          <input type="text" id="lastname" name="lastname" required>
+          
+          <label for="group">Select group:</label>
+          <select id="group" name="group">
+            <option value="REACT N1">REACT N1</option>
+            <option value="REACT N11">REACT N11</option>
+            <option value="REACT N13">REACT N13</option>
+            <option value="REACT N15">REACT N15</option>
+          </select>
+          
+          <label for="doesWork">
+            <input type="checkbox" id="doesWork" name="doesWork">
+            Does work?
+          </label>
+          
+          <div class="actions">
+            <button type="button" id="closeModal">Close</button>
+            <button type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
